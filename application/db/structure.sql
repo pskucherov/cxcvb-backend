@@ -22,21 +22,21 @@ ALTER TABLE "AccountRole" ADD CONSTRAINT "pkAccountRole" PRIMARY KEY ("accountId
 ALTER TABLE "AccountRole" ADD CONSTRAINT "fkAccountRoleAccount" FOREIGN KEY ("accountId") REFERENCES "Account" ("accountId");
 ALTER TABLE "AccountRole" ADD CONSTRAINT "fkAccountRoleRole" FOREIGN KEY ("roleId") REFERENCES "Role" ("roleId");
 
-CREATE TABLE "Country" (
-  "countryId" bigint generated always as identity,
-  "name" varchar NOT NULL
-);
+-- CREATE TABLE "Country" (
+--   "countryId" bigint generated always as identity,
+--   "name" varchar NOT NULL
+-- );
 
-ALTER TABLE "Country" ADD CONSTRAINT "pkCountry" PRIMARY KEY ("countryId");
+-- ALTER TABLE "Country" ADD CONSTRAINT "pkCountry" PRIMARY KEY ("countryId");
 
-CREATE TABLE "City" (
-  "cityId" bigint generated always as identity,
-  "name" varchar NOT NULL,
-  "countryId" bigint NOT NULL
-);
+-- CREATE TABLE "City" (
+--   "cityId" bigint generated always as identity,
+--   "name" varchar NOT NULL,
+--   "countryId" bigint NOT NULL
+-- );
 
-ALTER TABLE "City" ADD CONSTRAINT "pkCity" PRIMARY KEY ("cityId");
-ALTER TABLE "City" ADD CONSTRAINT "fkCityCountry" FOREIGN KEY ("countryId") REFERENCES "Country" ("countryId");
+-- ALTER TABLE "City" ADD CONSTRAINT "pkCity" PRIMARY KEY ("cityId");
+-- ALTER TABLE "City" ADD CONSTRAINT "fkCityCountry" FOREIGN KEY ("countryId") REFERENCES "Country" ("countryId");
 
 CREATE TABLE "Session" (
   "sessionId" bigint generated always as identity,
